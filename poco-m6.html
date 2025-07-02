@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realme C61 Product Page</title>
+  <link rel="stylesheet" href="poco-m6.css" />
+</head>
+
+<nav class="navbar" id="navbar">
+        <a href="#" class="navbar-logo">Saini Store</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" style="display:none;">&#9776;</button>
+
+        <div class="navbar-search">
+            <input type="text" placeholder="Search for products, brands and more" aria-label="Search">
+            <button type="submit" id="searchBtn" onclick="this.style.display='none'" style="background-color:#0087b4;">Search</button>
+        </div>
+
+        <div class="navbar-links" id="navbarLinks">
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Shop</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div> 
+        <div class="navbar-actions">
+            <button class="cart-btn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="9" cy="21" r="1.5"/>
+                    <circle cx="19" cy="21" r="1.5"/>
+                    <path d="M5 6h2l1 7h10l1-7H7"/>
+                </svg>
+                Cart
+            </button>
+            <button class="login-btn">Login or SignUp</button>
+        </div>
+    </nav>
+    
+    <!-- Navbar End -->
+
+  <!--Sliding Text Effect -->
+    <div class="sliding-text-container-horizontal">
+        <div class="sliding-text-horizontal">
+            🚨 Big Sale! Up to 50% off on selected items. Free shipping on orders over $50. New arrivals just landed – shop the latest trends now!
+        </div>
+    </div>
+
+
+<body>
+  <div class="product-page">
+    <div class="gallery">
+      <div class="thumbnails">
+        <img src="image/a.webp" alt="thumb1" onclick="changeMainImage(this.src)">
+        <img src="image/b.png" alt="thumb2" onclick="changeMainImage(this.src)">
+      </div>
+      <div class="main-image">
+        <img id="mainProductImage" src="image/a.webp" alt="realme C61">
+      </div>
+    </div>
+    <div class="details">
+      <h2>realme C61 (Marble Black, 64 GB) (4 GB RAM)</h2>
+      <div class="price">
+        <span class="current">₹7,699</span>
+        <span class="old">₹8,999</span>
+        <span class="discount">14% off</span>
+      </div>
+      <div class="offers">
+        <h3>Available offers</h3>
+        <ul>
+          <li>✅ Bank Offer 5% cashback on Flipkart Axis Bank Credit Card</li>
+          <li>✅ Bank Offer 5% cashback on Axis Bank Flipkart Debit Card</li>
+          <li>✅ Bank Offer Flat ₹10 Instant Cashback on Paytm UPI</li>
+        </ul>
+      </div>
+      <div class="exchange">
+        <label>
+          <input type="radio" name="exchange" checked> Buy without Exchange ₹7,699
+        </label>
+        <label>
+          <input type="radio" name="exchange"> Buy with Exchange (up to ₹6,350 off)
+        </label>
+      </div>
+      <div class="selectors">
+        <div class="ram-selector">
+          <p>RAM</p>
+          <button onclick="selectOption(this)">4 GB</button>
+          <button onclick="selectOption(this)">6 GB</button>
+        </div>
+        <div class="storage-selector">
+          <p>Storage</p>
+          <button onclick="selectOption(this)">64 GB</button>
+          <button class="disabled">128 GB</button>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="add">🛒 ADD TO CART</button>
+        <button class="buy">⚡ BUY NOW</button>
+      </div>
+      <div class="warranty">
+        1 Year Manufacturer Warranty for Device and 6 Months for Inbox Accessories
+      </div>
+    </div>
+  </div>
+  <script src="poco-m6.js"></script>
+</body>
+</html>

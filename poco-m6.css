@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    color: #fff;
+     padding: 0 20px;
+    height: 60px;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative; 
+    z-index: 1000;
+}
+
+/* Add this to your style.css file */
+
+.navbar-search input[type="text"] {
+    background-color: #f3f3f3; /* off white/gray */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.navbar-search input[type="text"]:focus {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-color: #888;
+}
+
+
+
+     .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+.navbar-logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 2rem;
+     font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+font-style: normal;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navbar-search {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 1rem;
+}
+
+.navbar-search input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+}
+
+.navbar-search button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0087b4;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+    color: #0087b4;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-btn, .login-btn {
+    background: #0087b4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+}
+
+.cart-btn svg {
+    vertical-align: middle;
+}
+
+
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+    .navbar-search {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
+    .navbar-links, .navbar-actions {
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+    .navbar-logo {
+        margin-bottom: 0.5rem;
+    }
+    .navbar-search {
+        margin: 0.5rem 0;
+        max-width: 100%;
+    }
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        display: none;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .navbar-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 0.5rem 0;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 1.2rem;
+    }
+}
+
+/* Optional: Add a little shadow for depth */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+
+
+/* Sliding Text Styles */
+.sliding-text-container-horizontal {
+        position: relative;
+        height: 30px;
+        overflow: hidden;
+        margin: 20px 0;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+        background: #f5f5f5;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .sliding-text-horizontal {
+        position: absolute;
+        height: 100%;
+        white-space: nowrap;
+        font-size: 18px;
+        color: #333;
+        animation: slide-horizontal 20s linear infinite;
+        left: 100%;
+    }
+    @keyframes slide-horizontal {
+        0% {
+            left: 100%;
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        50% {
+            left: 0;
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            left: -100%;
+            opacity: 0;
+        }
+    }
+    
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.product-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.gallery {
+  flex: 1 1 300px;
+  display: flex;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.thumbnails img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+
+.main-image img {
+  width: 300px;
+  height: auto;
+}
+
+.details {
+  flex: 1 1 400px;
+  padding: 0 20px;
+}
+
+.details h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.price {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.price .current {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 10px;
+}
+
+.price .discount {
+  color: #388e3c;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.offers h3 {
+  margin: 10px 0 5px;
+}
+
+.offers ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.exchange {
+  margin: 20px 0;
+}
+
+.exchange label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.selectors {
+  margin: 20px 0;
+}
+
+.selectors p {
+  margin: 5px 0;
+}
+
+.selectors button {
+  margin: 5px 5px 5px 0;
+  padding: 5px 10px;
+  border: 1px solid #888;
+  background: #fff;
+  cursor: pointer;
+}
+
+.selectors button.active {
+  border: 2px solid #2874f0;
+  background: #e7f0fd;
+}
+
+.selectors button.disabled {
+  color: #999;
+  border: 1px dashed #999;
+  cursor: not-allowed;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.buttons .add {
+  background: #ff9f00;
+  color: #fff;
+}
+
+.buttons .buy {
+  background: #fb641b;
+  color: #fff;
+}
+
+.warranty {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+
+

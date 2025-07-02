@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    color: #fff;
+     padding: 0 20px;
+    height: 60px;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative; 
+    z-index: 1000;
+}
+
+/* Add this to your style.css file */
+
+.navbar-search input[type="text"] {
+    background-color: #f3f3f3; /* off white/gray */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.navbar-search input[type="text"]:focus {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-color: #888;
+}
+
+
+
+     .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+.navbar-logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 2rem;
+     font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+font-style: normal;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navbar-search {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 1rem;
+}
+
+.navbar-search input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+}
+
+.navbar-search button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0087b4;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+    color: #0087b4;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-btn, .login-btn {
+    background: #0087b4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+}
+
+.cart-btn svg {
+    vertical-align: middle;
+}
+
+
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+    .navbar-search {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
+    .navbar-links, .navbar-actions {
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+    .navbar-logo {
+        margin-bottom: 0.5rem;
+    }
+    .navbar-search {
+        margin: 0.5rem 0;
+        max-width: 100%;
+    }
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        display: none;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .navbar-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 0.5rem 0;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 1.2rem;
+    }
+}
+
+/* Optional: Add a little shadow for depth */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+
+
+/* Sliding Text Styles */
+.sliding-text-container-horizontal {
+        position: relative;
+        height: 30px;
+        overflow: hidden;
+        margin: 20px 0;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+        background: #f5f5f5;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .sliding-text-horizontal {
+        position: absolute;
+        height: 100%;
+        white-space: nowrap;
+        font-size: 18px;
+        color: #333;
+        animation: slide-horizontal 20s linear infinite;
+        left: 100%;
+    }
+    @keyframes slide-horizontal {
+        0% {
+            left: 100%;
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        50% {
+            left: 0;
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            left: -100%;
+            opacity: 0;
+        }
+    }
+    
+
+
+/* Hero Slider Styles */
+    .hero-slider {
+        position: relative;
+        width: 100vw;
+        max-width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        margin-top: 30px;
+        overflow: hidden;
+        border-radius: 0;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .slides {
+        position: relative;
+        width: 100vw;
+        height: 350px;
+    }
+    .slide {
+        display: none;
+        width: 100vw;
+        height: 350px;
+        object-fit: cover;
+        position: absolute;
+        left: 0; top: 0;
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+    .slide.active {
+        display: block;
+        opacity: 1;
+        z-index: 1;
+    }
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.7);
+        border: none;
+        font-size: 2rem;
+        padding: 0 12px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 2;
+        transition: background 0.2s;
+    }
+    .slider-btn:hover {
+        background: #fff;
+    }
+    .slider-btn.prev { left: 18px; }
+    .slider-btn.next { right: 18px; }
+    .slider-dots {
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 3;
+    }
+    .dot {
+        width: 12px;
+        height: 12px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.2s;
+        border: 1.5px solid #1976d2;
+    }
+    .dot.active, .dot:hover {
+        background: #1976d2;
+    }
+    @media (max-width: 600px) {
+        .hero-slider, .slides, .slide { height: 180px; width: 100vw; }
+    }
+    body {
+        overflow-x: hidden;
+    }
+
+        /* Phone Deals Section Styles */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.phone-deals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.phone-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 160px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.phone-card:hover {
+  transform: translateY(-5px);
+}
+
+.phone-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.phone-card h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+}
+
+.price {
+  font-weight: bold;
+  color: #000;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  padding: 30px 40px 10px;
+}
+
+.footer a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+  color: #b5b5b5;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-section.address p {
+  font-weight: normal;
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.footer-section .social-icons span {
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.footer-links a {
+  margin-right: 20px;
+  color: gold;
+  font-weight: bold;
+}
+
+.payments img {
+  height: 20px;
+  margin-left: 10px;
+}
